@@ -24,4 +24,6 @@ function tabela() {
     th.textContent = 'texto'
 
     seletor.appendChild(table)
+
+    console.log('teste de commit')
 }
