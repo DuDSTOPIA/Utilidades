@@ -1,0 +1,24 @@
+.cabecalho {
+    text-align: center;
+    height: 10vh;
+    background-color: darkgray;
+}
+
+.titulo_principal {
+    padding: 2em;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+.corpo_pagina {
+    margin-top: 10vh;
+}
+
+#form {
+    display: flex;
+}
+
+.infoInput {
+    margin: 3em 1em;
+}

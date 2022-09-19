@@ -9,8 +9,39 @@
     <title>Tabela</title>
 </head>
 <body>
-    TABELA
-    <table class="tabela"></table>
+    <header class="cabecalho">
+        <h1 class="titulo_principal">TABELA</h1>
+    </header>
+    <main class="corpo_pagina">
+
+        <form id="form">
+            <div class="infoInput">
+            <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                
+            </div>
+            <div class="infoInput">
+            <label for="cpf">CPF:</label>
+                <input type="text" id="cpf">
+                
+            </div>
+            <br>
+            <div class="infoInput">
+            <label for="rg">RG:</label>
+                <input type="text" id="rg">
+                
+            </div>
+            <div class="infoInput">
+            <label for="nascimento">Nascimento:</label>
+                <input type="text" id="nascimento">
+            </div>
+            
+            <button type="submit" id="botao_Tabela">Incluir</button>
+        </form>
+
+        <table class="tabela"></table>
+
+    </main>
 
     <script src="tabela.js"></script>
 </body>
