@@ -1,36 +1,29 @@
+//
 
-let nome = document.querySelector('#nome');
-let cpf = document.querySelector('#cpf');
-let rg = document.querySelector('#rg');
-let nascimento = document.querySelector('#nascimento');
+// cria o titulo da tabela apenas
+export function tabelaCabeçalho(...args) {
 
-let form = document.querySelector('#form');
-
-tabelaCabeçalho('Nome', 'CPF', 'RG', 'DN');
-
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    tabelaCorpo(nome, cpf, rg, nascimento)
-    console.log(nome)
-})
-
-
-
-// tabela cabeçalho cria o titulo da tabela apenas
-function tabelaCabeçalho(...arguments) {
-
-    //busca o seletor table no DOM//
+    
     let table = document.querySelector('table');
 
-    // Cria a thead e a tr na table//
+    
     let thead = document.createElement('thead');
     let tr = document.createElement('tr')
     
     thead.appendChild(tr);
     
-    // Repassa a funcao celula para cada item repassado no paramentro arguments//
-    arguments.forEach(celula);
-        
+    
+    // Repassa a funcao celula para cada item adicionado no paramentro arguments//
+    args.forEach(criaForm)
+    args.forEach(celula);
+
+    // Criei um jeito de fazer o formulario junto com o cabeçalho da tabela, 
+    //agora preciso criar a iteração
+
+
+
+    
+    // Cria as celulas do cabeçalho da tabela //
     function celula(item) {
         let th = document.createElement('th');
 
@@ -45,25 +38,51 @@ function tabelaCabeçalho(...arguments) {
         th.textContent = item
         console.log(item)        
     }
+
+    
+
+    function criaForm(item) {
+        let form = document.querySelector('form');
+        
+        let divInput = document.createElement('div');
+        let label = document.createElement('label');
+        let input = document.createElement('input');
+
+        divInput.setAttribute('class', 'infoInput');
+        divInput.appendChild(label)
+        label.setAttribute('class', 'tituloInput');
+        label.setAttribute('for', item)
+        label.innerHTML = item;
+        divInput.appendChild(input)
+        input.setAttribute('type', 'text')
+        input.setAttribute('require', '')
+
+        form.style.display = 'flex'
+        label.style.fontSize = '20px'
+        label.style.fontWeight = '500'
+
+        form.appendChild(divInput)
+    }
+
+
     
     table.appendChild(thead)
 }
 
 
 
-function tabelaCorpo(...arguments) {
+export function tabelaCorpo(...args) {
 
-    //busca o seletor table no DOM//
+    
     let table = document.querySelector('table');
 
-    // Cria a thead e a tr na table//
     let tbody = document.createElement('tbody');
     let tr = document.createElement('tr')
     
     tbody.appendChild(tr);
     
     // Repassa a funcao celula para cada item repassado no paramentro arguments//
-    arguments.forEach(celula);
+    args.forEach(celula);
         
     function celula(item) {
         let td = document.createElement('th');
