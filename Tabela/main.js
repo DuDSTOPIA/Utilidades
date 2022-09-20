@@ -1,17 +1,13 @@
-import {tabelaCabeçalho} from './tabela.js'
-import {tabelaCorpo} from './tabela.js'
+import {constroi_Form_e_cabecalho_Tabela} from './tabela.js'
+import {constroi_corpo_tabela} from './tabela.js'
 
-let nome = document.querySelector('#nome');
-let cpf = document.querySelector('#cpf');
-let rg = document.querySelector('#rg');
-let nascimento = document.querySelector('#nascimento');
+constroi_Form_e_cabecalho_Tabela('Nome', 'CPF', 'RG', 'Nascimento');
 
-let form = document.querySelector('#form');
-
-tabelaCabeçalho('UH', 'Classe', 'Modelo', 'Valor');
 
 form.addEventListener('submit', event => {
     event.preventDefault();
-    tabelaCorpo(nome, cpf, rg, nascimento)
-    console.log(nome)
+    constroi_corpo_tabela('nome', 'cpf', 'rg', 'nascimento')
 })
+
+
+

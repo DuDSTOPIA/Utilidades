@@ -1,7 +1,7 @@
 .cabecalho {
     text-align: center;
-    height: 10vh;
-    background-color: darkgray;
+    height: 15vh;
+    background-color: rgb(87, 133, 202);
 }
 
 .titulo_principal {
@@ -12,13 +12,13 @@
 }
 
 .corpo_pagina {
-    margin-top: 10vh;
+    justify-content: space-around;
+    
 }
 
-#form {
-    display: flex;
+body {
+    background-color: rgb(237, 239, 245);
 }
 
-.infoInput {
-    margin: 3em 1em;
-}
+
+
