@@ -44,17 +44,26 @@ export function constroi_Form_e_cabecalho_Tabela(...args) {
         let input = document.createElement('input');
         let quebra_linha = document.createElement('br')
         
+
+        
         // adicionando seletor class, o for em label, type e require//
+
+        let stringClassOrId = item.replace(' ', '_')
+        console.log(stringClassOrId)
+
         divInput.setAttribute('class', 'infoInput');
         divInput.appendChild(label);
+
         label.setAttribute('class', 'tituloInput');
-        label.setAttribute('for', `${item.toLowerCase()}`);
+        label.setAttribute('for', `${stringClassOrId.toLowerCase()}`);
         label.innerHTML = `${item}: `;
+
         divInput.appendChild(quebra_linha);
         divInput.appendChild(input);
+
         input.setAttribute('type', 'text');
-        input.setAttribute('class', `${item.toLowerCase()}`);
-        input.setAttribute('id', `${item.toLowerCase()}`);
+        input.setAttribute('class', `${stringClassOrId.toLowerCase()}`);
+        input.setAttribute('id', `${stringClassOrId.toLowerCase()}`);
         input.setAttribute('required', '');
         
         //adicionando os estilos Form
@@ -88,6 +97,8 @@ export function constroi_Form_e_cabecalho_Tabela(...args) {
 
 export function constroi_corpo_tabela(...args) {
 
+    
+
     let table = document.querySelector('table');
 
     let tbody = document.createElement('tbody');
@@ -97,7 +108,8 @@ export function constroi_corpo_tabela(...args) {
     
     // Repassa a funcao celula para cada item repassado no paramentro arguments//
     args.forEach((item) => {
-        let seletor = `.${item.toLowerCase()}`;
+        let stringClassOrId = item.replace(' ', '_')
+        let seletor = `.${stringClassOrId.toLowerCase()}`;
         let retorno = document.querySelector(seletor);
         celula(retorno)
     })
