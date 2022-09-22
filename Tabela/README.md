@@ -5,7 +5,11 @@ Durante meus cursos, sempre acabo me esbarrando com a nescessidade de criar tabe
 
 Modo de usar:
 
-- First thisgs first: coloca o arquivo na pasta do projeto e importa as funções. O arquivo tem basicamente duas funções:
+- First thisgs first: Coloca o arquivo na pasta do projeto e importa as funções. 
+                      Depois, crie uma tag "form" e uma tag "table", pois essas, seráo as tags buscadas pela função para saber onde criar o formulario e a tabela.
+   
+   
+   O arquivo tem basicamente duas funções:
 
 01. constroi_Form_e_cabecalho_Tabela() que cria o formulario e o titulo da tabela.
    
