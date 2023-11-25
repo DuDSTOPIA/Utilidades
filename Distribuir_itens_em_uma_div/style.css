@@ -1,0 +1,38 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(71, 71, 71);
+    color: aliceblue;
+    background-color:rgb(0, 0, 0);
+}
+
+.titulo_div {
+    width: 100vw;
+    text-align: center;
+}
+
+.texto_div {
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    border: solid 1px blueviolet;
+}
+
+.distribuição {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:rgb(91, 91, 91);
+}
+
+.modelo{
+    border: solid 1px red;
+    width: 20vw;
+    margin: 1em;
+}
+
+.item {
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+}
